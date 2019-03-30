@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "4693b542-9981-4906-beea-f77c981ed4aa",
+		"name": "ASP NET Core - Web API CRUD Demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "GET All Products"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Product By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Products/a73020a2-4a8e-4a36-a3d6-224311878940",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Products",
+						"a73020a2-4a8e-4a36-a3d6-224311878940"
+					]
+				},
+				"description": "Get Product By ID"
+			},
+			"response": []
+		},
+		{
+			"name": "POST A new Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Samsung Galaxy S7\",\n\t\"price\": 500\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products"
+					]
+				},
+				"description": "POST A new Product"
+			},
+			"response": []
+		},
+		{
+			"name": "Update an Existing Product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"a73020a2-4a8e-4a36-a3d6-224311878940\",\n\t\"name\": \"Samsung Galaxy S7\",\n\t\"price\": 450\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products/a73020a2-4a8e-4a36-a3d6-224311878940",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"a73020a2-4a8e-4a36-a3d6-224311878940"
+					]
+				},
+				"description": "Update an Existing Product"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product by Id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": \"a73020a2-4a8e-4a36-a3d6-224311878940\",\n\t\"name\": \"Samsung Galaxy S7\",\n\t\"price\": 450\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/products/07553eaf-da63-44bb-abff-f0edac19f433",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"products",
+						"07553eaf-da63-44bb-abff-f0edac19f433"
+					]
+				},
+				"description": "Delete Product by Id"
+			},
+			"response": []
+		}
+	]
+}

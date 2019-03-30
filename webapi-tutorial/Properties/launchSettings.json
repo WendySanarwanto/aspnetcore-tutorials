@@ -4,8 +4,8 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
     "iisExpress": {
-      "applicationUrl": "http://localhost:11457",
-      "sslPort": 44311
+      "applicationUrl": "http://localhost:21020",
+      "sslPort": 44382
     }
   },
   "profiles": {
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "todo_api": {
+    "WebapiTutorial": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

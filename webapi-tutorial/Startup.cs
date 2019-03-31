@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
 using WebapiTutorial.Models;
+using WebapiTutorial.Services;
 
 namespace WebapiTutorial
 {
@@ -28,6 +29,7 @@ namespace WebapiTutorial
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<BookService>();
             services.AddDbContext<ProductContext>(opt => opt.UseInMemoryDatabase("webapi-tutorial"));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

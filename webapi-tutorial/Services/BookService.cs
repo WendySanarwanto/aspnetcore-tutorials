@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
 using WebapiTutorial.Models;
@@ -13,8 +14,8 @@ namespace WebapiTutorial.Services {
       this._books = database.GetCollection<Book>("Books");
     }
 
-    public List<Book> Get() {
-      return this._books.Find(book => true).ToList();
+    public Task<List<Book>> Get() {
+      return this._books.Find(book => true).ToListAsync();
     }
 
     public Book Get(string id) {

@@ -17,8 +17,8 @@ namespace WebapiTutorial.Controllers {
     }
 
     [HttpGet]
-    public ActionResult<List<Book>> GetBooks() {
-      return this._bookService.Get();
+    public async Task<ActionResult<IEnumerable<Book>>> GetBooks() {
+      return await this._bookService.Get();
     }
 
     [HttpGet("{id:length(24)}", Name = "GetBook")]
